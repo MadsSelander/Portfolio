@@ -1,0 +1,1339 @@
+
+
+/*Har hentet Open Sans fonr fra fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+
+
+
+*{
+
+margin: 0;
+box-sizing: border-box;
+padding: 0;
+font-family: 'Open Sans', sans-serif;
+text-decoration: none;
+color: var(--Tekstfarve); 
+
+}
+
+:root { /*Her skriver jeg de farver som jeg skal bruge i koden*/
+
+    --Baggrundsfarve: #3D687B; 
+    --Hover: #11ECF2; 
+    --Tekstfarve: #fff;   
+    --Mitcv: #333; 
+    --Burgermenu: #284652; 
+    
+    }
+
+
+body {
+
+    min-height: 100vh;
+    background: var(--Baggrundsfarve);
+    background-size: cover;
+    background-position: center;
+
+}
+
+ /*Navbar start*/
+header {
+
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+background: #fff;
+box-shadow: 0 5px 10px rgba(0, 0, 0,.1);
+padding: 20px 7%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+z-index: 1000;
+
+}
+
+header .logo{
+    font-weight: bolder;
+    font-size: 25px;
+    color: #333;
+    
+
+}
+
+header .navbar ul {
+    list-style: none;
+    text-transform: capitalize;
+
+
+}
+
+header .navbar ul li {
+
+    position: relative;
+    float: left ;
+
+
+}
+
+header .navbar ul li a{
+
+    font-size: 20px;
+    padding: 20px;
+    color: #333;
+    display: block;
+
+}
+
+header .navbar ul li a:hover{
+
+    background: #333;
+    color: #fff;
+
+}
+
+header .navbar ul li ul{
+
+    position: absolute;
+
+    left: 0;
+    width: 200px;
+    background: #fff;
+    display: none;
+}
+
+header .navbar ul li ul li{
+
+    width: 100%;
+    border-top: 1px solid rgb(0, 0, 0, .1);
+
+
+}
+
+header .navbar ul li ul li ul{
+
+    left: 200px;
+    top: 0;
+
+}
+
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+
+    display: initial ;
+
+
+}
+
+
+
+#menu-bar{
+    display: none;
+
+}
+
+header label{
+
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+
+
+}
+
+
+
+
+@media (max-width:991px){
+
+    header {
+
+        padding: 20px;
+
+
+    }
+
+
+    header label {
+
+        display: initial;
+    }
+
+
+
+
+    header .navbar {
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right:0 ;
+        background: #fff;
+        border-top: 1px solid rgb(0, 0, 0, .1);
+        display: none;
+
+    }
+
+
+    header .navbar ul li {
+
+        width: 100%;
+    
+
+    }
+
+    header .navbar ul li ul {
+
+        position: relative;
+
+        width: 100%;
+
+    }
+
+
+    header .navbar ul li ul li{
+
+        background: #eee;
+    }
+
+    header .navbar ul li ul li ul {
+
+    width: 100%;
+    left: 0%;
+
+    }
+
+
+#menu-bar:checked ~ .navbar{
+
+    display: initial;
+}
+
+
+
+}
+
+
+/*Navbar slut*/
+
+
+
+
+
+/*Forside start*/
+
+
+
+
+.indhold{
+
+    padding-top: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+}
+
+
+
+.text h2
+{
+  font-size: 3em;
+  padding-bottom: 20px;
+}
+.text h3
+{
+  font-size: 2em;
+  padding-bottom: 20px;
+}
+
+#tekst-forside{
+
+    padding-bottom: 20px;
+}
+
+
+.text a /*Knappen "læs mere" under text class i html*/
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.text a:hover
+{
+    background-color: var(--Hover); /*Baggrundsfarven på "læs mere" når jeg holder musen over*/
+    letter-spacing: 10px; /*Mellemrummet mellem teksten når jeg holder musen over "læs mere"*/
+}
+
+
+
+@media (min-width: 800px){
+
+
+    .indhold {
+        width: 100%;
+        min-height: 100vh;
+        padding: 100px;
+        display: flex;
+        align-items: center; /*Putter alle elementerne i midten*/
+        
+    }
+    
+    
+    .text h2 /*Mads Selander overskrift*/
+    {
+      font-size: 100px; 
+      font-weight: 800;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    .text h3 /*Velkommen til mit portfolio overskrift*/
+    {
+      font-size: 60px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 60px; /*Afstanden mellem linjerne*/
+      text-transform: uppercase; /*Store bogstaver*/
+    }
+    .text p /*Teksten om selve portfolioet*/
+    {
+      font-size: 20px;
+      color: #fff;
+      margin: 20px 0;
+      font-weight: 400;
+      max-width: 700px;
+    }
+    .text a /*Knappen "læs mere" under text class i html*/
+    {
+      display: inline-block;
+      font-size: 1em;
+      background: #fff;
+      padding: 10px 30px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 10px;
+      color: #111;
+      letter-spacing: 2px;
+      transition: 0.2s;
+    }
+    
+    .text a:hover
+    {
+        background-color: var(--Hover); /*Baggrundsfarven på "læs mere" når jeg holder musen over*/
+        letter-spacing: 10px; /*Mellemrummet mellem teksten når jeg holder musen over "læs mere"*/
+    }
+    
+    
+    
+    
+    #about { /*"Følg mig på sociale medier afsnittet*/
+        
+        text-align: center;
+        background-color: var(--Baggrundsfarve);
+        
+        
+        }
+    
+        .mig {
+    
+            height: 300px;
+            border-radius: 250px;
+        }
+        
+       
+        
+        #about h2 { /*Følg mig på sociale medier overskrift nederst*/
+        
+           margin: 30px 0; 
+           color: var(--Tekstfarve);
+           font-size: 40px;
+        }
+    
+        .social a { /*Sociale medier ikoner*/
+            margin: 0 5px;
+            color: var(--Tekstfarve);
+            font-size: 50px;
+            padding: 30px;
+            
+            
+        
+        }
+    
+        .social a:hover{ /*Hover på de sociale medier*/
+            
+            color: var(--Hover);
+        
+            
+        }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Forside slut*/
+
+
+
+
+
+
+
+
+
+
+
+/*Projekter side start*/
+
+
+
+
+      
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 2em;
+        justify-items: stretch; /*(vandret)Strækker dem hen over siden*/
+        align-items: stretch; /*Lodret*/
+        padding: 5%;
+        min-height: 100vh;
+        flex: 1 1 80%;
+        
+        
+    }
+    
+        .box1 {
+            grid-column: 2/6; /*Column er lodret*/
+            grid-row: 15/25; /*Row er vandret*/
+            background:#9C7B6D; 
+            padding: 1em; 
+            color: #fff;
+            background-image: url(./shop.JPG);
+            background-size: cover;
+            background-position: 50% 20%;
+            
+            
+        }
+    
+    
+        .box2 {
+            
+            grid-column: 2/6; /*Skriver man grid template columns er det forældrene.*/
+            grid-row: 45/55; /*Når der bare står 3, betyder det at den bare bliver på den tredje. */
+            background:#9C7B6D; 
+            color: #fff;
+            background-image: url(./Mig\ der\ danser\ .jpg);
+            background-size: cover;
+            background-position: 50% 20%;
+    
+        }
+    
+        .box3 {
+            grid-column:2/6 ; /*Nu skriver jeg 2 til 4, fordi at denne kasse starter i anden række.*/
+            grid-row: 4/15;
+            background:#9C7B6D;  
+            padding: 1em; 
+            color: #fff;
+            background-image: url(./Rumrejsen.JPG);
+            background-size: cover;
+            background-position: 50% 20%;
+            
+            
+
+            
+        }
+    
+        .box4 {
+            grid-column: 2/6; 
+            grid-row: 35/45; /*Man kan overlappe andre kasser. Her går den fra række 2 ned til 4.*/
+            background:#9C7B6D; 
+            padding: 1em; 
+
+            background-image: url(./tie\ dye\ materialer.JPG);
+            background-size: cover;
+            background-position: 50% 20%;
+           
+            color: #fff;
+        }
+    
+        .box5 {
+            grid-column: 2/6;
+            grid-row: 25/35;
+            background:#9C7B6D; 
+            padding: 1em; 
+            color: #fff;
+            background-image: url(./folkehop.JPG);
+            background-size: cover;
+            background-position: 50% 20%;
+            
+        }
+    
+    
+
+
+
+
+
+@media (min-width:800px) {
+
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    grid-gap: 2em;
+    justify-items: stretch; /*(vandret)Strækker dem hen over siden*/
+    align-items: stretch; /*Lodret*/
+    padding: 5%;
+    min-height: 100vh;
+    flex: 1 1 80%;
+    
+    
+}
+
+    .box1 { /*Shoppen*/
+        grid-column: 1/5; /*Column er lodret*/
+        grid-row: 30/45; /*Row er vandret*/
+  
+        
+        
+    }
+
+
+    .box2 { /*Mig der danser*/
+        
+        grid-column: 4/7; /*Skriver man grid template columns er det forældrene.*/
+        grid-row: 45/65; /*Når der bare står 3, betyder det at den bare bliver på den tredje. */
+     
+
+    }
+
+    .box3 { /*Rumrejsen*/
+        grid-column:5/7 ; /*Nu skriver jeg 2 til 4, fordi at denne kasse starter i anden række.*/
+        grid-row: 30/45;  
+        
+    }
+
+    .box4 { /*Tie die*/
+        grid-column: 1/7; 
+        grid-row: 3/30; /*Man kan overlappe andre kasser. Her går den fra række 2 ned til 4.*/
+      
+    }
+
+    .box5 { /*Folkehop*/
+        grid-column: 1/4;
+        grid-row: 45/65;
+      
+    
+    }
+
+}
+
+/*Portfolio side slut*/
+
+
+
+/*Folkehop projekt start*/
+
+
+
+
+#h2-folkehop {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 50px;
+    padding-top: 150px;
+    padding-bottom: 30px;
+}
+
+
+
+
+
+.wrapper-folkehop{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2em;
+    justify-items: stretch; /*(vandret)Strækker dem hen over siden*/
+    align-items: stretch; /*Lodret*/
+    padding: 5%;
+    min-height: 100vh;
+    flex: 1 1 80%;
+    
+    
+}
+
+    .box-folke {
+        grid-column: 1/7; /*Column er lodret*/
+        grid-row: 23/45; /*Row er vandret*/
+        background:#9C7B6D; 
+        padding: 1em; 
+        color: #fff;
+        background-image: url(./folkehop\ forside.JPG);
+        background-size: cover;
+        background-position: 50% 20%;
+        
+        
+    }
+
+
+    .box-dans {
+        
+        grid-column: 1/7; /*Skriver man grid template columns er det forældrene.*/
+        grid-row: 5/20; /*Når der bare står 3, betyder det at den bare bliver på den tredje. */
+        background:#9C7B6D; 
+        color: #fff;
+        background-image: url(./Mig\ der\ danser\ .jpg);
+        background-size: cover;
+        background-position: 50% 20%;
+
+    }
+
+    .box-tekst {
+        grid-column:1/7 ; /*Nu skriver jeg 2 til 4, fordi at denne kasse starter i anden række.*/
+        grid-row: 1/5;
+        background: var(--Burgermenu); 
+        padding: 1em; 
+        color: #fff;
+      
+        
+    
+    }
+
+    
+  
+
+
+
+
+@media (min-width:800px) {
+
+
+    #h2-folkehop {
+      
+        padding-top: 200px;
+       
+    }
+
+
+    .box-folke {
+        grid-column: 2/6; /*Column er lodret*/
+        grid-row: 20/50; /*Row er vandret*/
+  
+        
+        
+    }
+
+
+    .box-dans {
+        
+        grid-column: 2/6; /*Skriver man grid template columns er det forældrene.*/
+        grid-row: 5/20; /*Når der bare står 3, betyder det at den bare bliver på den tredje. */
+    
+
+    }
+
+    .box-tekst {
+        grid-column:2/6 ; /*Nu skriver jeg 2 til 4, fordi at denne kasse starter i anden række.*/
+        grid-row: 1/5;
+    
+      
+        
+    
+    }
+
+           
+        
+          
+        
+        }
+
+
+
+/*Folkehop projekt slut*/
+
+
+
+
+
+
+
+
+
+
+/*Tie dye projekt start*/
+
+
+
+
+#h2-folkehop {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 50px;
+    padding-top: 150px;
+    padding-bottom: 30px;
+}
+
+#tekst-tie{
+
+    padding: 40px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+
+
+}
+
+
+
+    .box-tie {
+
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        
+     
+    }
+
+
+   
+
+   
+
+
+@media (min-width:800px) {
+
+
+    #h2-folkehop {
+      
+        padding-top: 200px;
+       
+    }
+    
+
+        
+    }
+
+
+    /*Tie dye projekt slut*/
+
+
+
+
+
+
+
+    /*ballet projekt start*/
+
+
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 2em;
+        justify-items: stretch; /*(vandret)Strækker dem hen over siden*/
+        align-items: stretch; /*Lodret*/
+        padding: 5%;
+        min-height: 100vh;
+        flex: 1 1 80%;
+        
+        
+    }
+    
+        .box1-ballet {
+            grid-column: 1/7; /*Column er lodret*/
+            grid-row: 3/8; /*Row er vandret*/
+            background:#9C7B6D; 
+            padding: 1em; 
+            color: #fff;
+            background-image: url(./shop.JPG);
+            background-size: cover;
+            background-position: 50% 20%;
+            
+            
+        }
+    
+    
+    
+        .box3-ballet {
+            grid-column:1/7 ; /*Nu skriver jeg 2 til 4, fordi at denne kasse starter i anden række.*/
+            grid-row: 2;
+            background:var(--Burgermenu);  
+            padding: 1em; 
+           
+            
+            
+
+            
+        }
+    
+  
+@media (min-width:800px) {
+
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    grid-gap: 2em;
+    justify-items: stretch; /*(vandret)Strækker dem hen over siden*/
+    align-items: stretch; /*Lodret*/
+    padding: 5%;
+    min-height: 100vh;
+    flex: 1 1 80%;
+    
+    
+}
+
+    .box1-ballet { /*Shoppen*/
+        grid-column: 2/6; /*Column er lodret*/
+        grid-row: 5/15; /*Row er vandret*/
+  
+        
+        
+    }
+
+
+  
+
+    .box3-ballet { /*Rumrejsen*/
+        grid-column:2/6 ; /*Nu skriver jeg 2 til 4, fordi at denne kasse starter i anden række.*/
+        grid-row: 2/5;  
+        background: var(--Burgermenu);
+        
+    }
+
+  
+
+
+
+}
+
+/*ballet projekt slut*/
+
+
+/*Rumrejsen projekt start*/
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2em;
+    justify-items: stretch; /*(vandret)Strækker dem hen over siden*/
+    align-items: stretch; /*Lodret*/
+    padding: 5%;
+    min-height: 100vh;
+    flex: 1 1 80%;
+    
+    
+}
+
+    .box1-rumrejse {
+        grid-column: 1/7; /*Column er lodret*/
+        grid-row: 3/8; /*Row er vandret*/
+        padding: 1em; 
+        background-image: url(./Rumrejsen.JPG);
+        background-size: cover;
+        background-position: 50% 20%;
+        
+        
+    }
+
+
+
+    .box3-rumrejse {
+        grid-column:1/7 ; /*Nu skriver jeg 2 til 4, fordi at denne kasse starter i anden række.*/
+        grid-row: 2/3;
+        background:var(--Burgermenu);  
+        padding: 1em; 
+       
+        
+        
+
+        
+    }
+
+
+@media (min-width:800px) {
+
+
+.wrapper{
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: repeat(20, 1fr);
+grid-gap: 2em;
+justify-items: stretch; /*(vandret)Strækker dem hen over siden*/
+align-items: stretch; /*Lodret*/
+padding: 5%;
+min-height: 100vh;
+flex: 1 1 80%;
+
+
+}
+
+.box1-rumrejse { /*Shoppen*/
+    grid-column: 2/6; /*Column er lodret*/
+    grid-row: 5/15; /*Row er vandret*/
+
+    
+    
+}
+
+
+
+
+.box3-rumrejse { /*Rumrejsen*/
+    grid-column:2/6 ; /*Nu skriver jeg 2 til 4, fordi at denne kasse starter i anden række.*/
+    grid-row: 3/5;  
+    background: var(--Burgermenu);
+    
+}
+
+
+
+
+
+}
+
+
+
+
+/*Rumrejsen projekt slut*/
+
+
+
+
+/*Om mig side start*/
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2em;
+    justify-items: stretch; /*(vandret)Strækker dem hen over siden*/
+    align-items: stretch; /*Lodret*/
+    padding: 5%;
+    min-height: 100vh;
+    flex: 1 1 80%;
+    
+    
+}
+
+#h2-folkehop {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 50px;
+    padding-top: 150px;
+    padding-bottom: 30px;
+}
+
+
+    .box1-om {
+        grid-column: 1/7; /*Column er lodret*/
+        grid-row: 2/8; /*Row er vandret*/
+        padding: 1em; 
+        background-image: url(./Billede\ af\ mig.jpg);
+        background-size: cover;
+        background-position: 50% 20%;
+        
+        
+    }
+
+
+
+    .box3-om {
+        grid-column:1/7 ; /*Nu skriver jeg 2 til 4, fordi at denne kasse starter i anden række.*/
+        grid-row: 1/2;
+        background:var(--Burgermenu);  
+        padding: 1em; 
+       
+        
+        
+
+        
+    }
+
+
+@media (min-width:872px) {
+
+
+.wrapper{
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: repeat(20, 1fr);
+grid-gap: 2em;
+justify-items: stretch; /*(vandret)Strækker dem hen over siden*/
+align-items: stretch; /*Lodret*/
+padding: 5%;
+min-height: 100vh;
+flex: 1 1 80%;
+
+
+}
+
+
+#h2-folkehop {
+      
+    padding-top: 200px;
+   
+}
+
+.box1-om { /*Shoppen*/
+    grid-column: 2/6; /*Column er lodret*/
+    grid-row: 5/24; /*Row er vandret*/
+
+    
+    
+}
+
+
+
+
+.box3-om { /*Rumrejsen*/
+    grid-column:2/6 ; /*Nu skriver jeg 2 til 4, fordi at denne kasse starter i anden række.*/
+    grid-row: 1/5;  
+    background: var(--Burgermenu);
+    
+}
+
+
+
+
+
+}
+
+
+/*Om mig side slut*/
+
+
+
+
+
+
+
+
+/*CV side start*/
+
+.indhold-cv{
+
+    padding-top: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+
+
+}
+
+
+
+.text h2
+{
+  font-size: 3em;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+.text h3
+{
+  font-size: 2em;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+
+#tekst-forside{
+
+    padding-bottom: 20px;
+}
+
+
+.text a /*Knappen "læs mere" under text class i html*/
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.text a:hover
+{
+    background-color: var(--Hover); /*Baggrundsfarven på "læs mere" når jeg holder musen over*/
+    letter-spacing: 10px; /*Mellemrummet mellem teksten når jeg holder musen over "læs mere"*/
+}
+
+
+
+@media (min-width: 800px){
+
+
+    .indhold {
+        width: 100%;
+        min-height: 100vh;
+        padding: 100px;
+        display: flex;
+        align-items: center; /*Putter alle elementerne i midten*/
+        
+    }
+    
+    
+    .text h2 /*Mads Selander overskrift*/
+    {
+      font-size: 100px; 
+      font-weight: 800;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    .text h3 /*Velkommen til mit portfolio overskrift*/
+    {
+      font-size: 60px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 60px; /*Afstanden mellem linjerne*/
+      text-transform: uppercase; /*Store bogstaver*/
+    }
+    .text p /*Teksten om selve portfolioet*/
+    {
+      font-size: 20px;
+      color: #fff;
+      margin: 20px 0;
+      font-weight: 400;
+      max-width: 700px;
+    }
+    .text a /*Knappen "læs mere" under text class i html*/
+    {
+      display: inline-block;
+      font-size: 1em;
+      background: #fff;
+      padding: 10px 30px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 10px;
+      color: #111;
+      letter-spacing: 2px;
+      transition: 0.2s;
+    }
+    
+    .text a:hover
+    {
+        background-color: var(--Hover); /*Baggrundsfarven på "læs mere" når jeg holder musen over*/
+        letter-spacing: 10px; /*Mellemrummet mellem teksten når jeg holder musen over "læs mere"*/
+    }
+    
+
+    
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CV side slut*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
