@@ -47,7 +47,6 @@ top: 0;
 left: 0;
 right: 0;
 background: var(--Burgermenu);
-box-shadow: 0 5px 10px rgba(0, 0, 0,.1);
 padding: 20px 7%;
 display: flex;
 align-items: center;
@@ -101,7 +100,7 @@ header .navbar ul li a{ /*Teksten i selve navbaren*/
 header .navbar ul li a:hover{ /*Hoveren i selve navbaren*/
 
     background: var(--Hover);
-    color: #fff;
+    
 
 }
 
@@ -118,8 +117,7 @@ header .navbar ul li ul{ /*Nummer 2 navbar der komemr ned */
 header .navbar ul li ul li{
 
     width: 100%;
-    border-top: 1px solid rgb(0, 0, 0, .1);
-
+   
 
 }
 
@@ -131,7 +129,7 @@ header .navbar ul li ul li ul{
 }
 
 
-header .navbar ul li:focus-within > ul,
+header .navbar ul li:focus-within > ul, 
 header .navbar ul li:hover > ul {
 
     display: initial ;
