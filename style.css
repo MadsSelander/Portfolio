@@ -611,7 +611,7 @@ header label{
 
     .box-folke {
         grid-column: 1/7; /*Column er lodret*/
-        grid-row: 23/45; /*Row er vandret*/
+        grid-row: 22/45; /*Row er vandret*/
         background:#9C7B6D; 
         padding: 1em; 
         color: #fff;
@@ -626,7 +626,7 @@ header label{
     .box-dans {
         
         grid-column: 1/7; /*Skriver man grid template columns er det forældrene.*/
-        grid-row: 5/20; /*Når der bare står 3, betyder det at den bare bliver på den tredje. */
+        grid-row: 2/20; /*Når der bare står 3, betyder det at den bare bliver på den tredje. */
         background:#9C7B6D; 
         color: #fff;
         background-image: url(./Mig\ der\ danser\ .jpg);
@@ -635,16 +635,7 @@ header label{
 
     }
 
-    .box-tekst {
-        grid-column:1/7 ; /*Nu skriver jeg 2 til 4, fordi at denne kasse starter i anden række.*/
-        grid-row: 1/5;
-        background: var(--Burgermenu); 
-        padding: 1em; 
-        color: #fff;
-      
-        
-    
-    }
+   
 
     
   
@@ -674,7 +665,7 @@ header label{
     .box-dans {
         
         grid-column: 2/6; /*Skriver man grid template columns er det forældrene.*/
-        grid-row: 5/20; /*Når der bare står 3, betyder det at den bare bliver på den tredje. */
+        grid-row: 2/20; /*Når der bare står 3, betyder det at den bare bliver på den tredje. */
     
 
     }
@@ -790,7 +781,7 @@ header label{
     
         .box1-ballet {
             grid-column: 1/7; /*Column er lodret*/
-            grid-row: 3/8; /*Row er vandret*/
+            grid-row: 1/8; /*Row er vandret*/
             background:#9C7B6D; 
             padding: 1em; 
             color: #fff;
@@ -802,18 +793,6 @@ header label{
         }
     
     
-    
-        .box3-ballet {
-            grid-column:1/7 ; /*Nu skriver jeg 2 til 4, fordi at denne kasse starter i anden række.*/
-            grid-row: 2;
-            background:var(--Burgermenu);  
-            padding: 1em; 
-           
-            
-            
-
-            
-        }
     
   
 @media (min-width:800px) {
@@ -835,23 +814,12 @@ header label{
 
     .box1-ballet { /*Shoppen*/
         grid-column: 2/6; /*Column er lodret*/
-        grid-row: 5/15; /*Row er vandret*/
+        grid-row: 2/20; /*Row er vandret*/
   
         
         
     }
 
-
-  
-
-    .box3-ballet { /*Rumrejsen*/
-        grid-column:2/6 ; /*Nu skriver jeg 2 til 4, fordi at denne kasse starter i anden række.*/
-        grid-row: 2/5;  
-        background: var(--Burgermenu);
-        
-    }
-
-  
 
 
 
@@ -877,7 +845,7 @@ header label{
 
     .box1-rumrejse {
         grid-column: 1/7; /*Column er lodret*/
-        grid-row: 3/8; /*Row er vandret*/
+        grid-row: 1/8; /*Row er vandret*/
         padding: 1em; 
         background-image: url(./Rumrejsen.JPG);
         background-size: cover;
@@ -888,17 +856,13 @@ header label{
 
 
 
-    .box3-rumrejse {
-        grid-column:1/7 ; /*Nu skriver jeg 2 til 4, fordi at denne kasse starter i anden række.*/
-        grid-row: 2/3;
-        background:var(--Burgermenu);  
-        padding: 1em; 
+   
        
         
         
 
         
-    }
+    
 
 
 @media (min-width:800px) {
@@ -920,19 +884,9 @@ flex: 1 1 80%;
 
 .box1-rumrejse { /*Shoppen*/
     grid-column: 2/6; /*Column er lodret*/
-    grid-row: 5/15; /*Row er vandret*/
+    grid-row: 1/15; /*Row er vandret*/
 
     
-    
-}
-
-
-
-
-.box3-rumrejse { /*Rumrejsen*/
-    grid-column:2/6 ; /*Nu skriver jeg 2 til 4, fordi at denne kasse starter i anden række.*/
-    grid-row: 3/5;  
-    background: var(--Burgermenu);
     
 }
 
